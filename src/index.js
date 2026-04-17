@@ -99,7 +99,9 @@ async function handlePushEvent({ eventPayload, env = process.env, fetchImpl = fe
 }
 
 async function main() {
-  if (process.env.GITHUB_EVENT_NAME && process.env.GITHUB_EVENT_NAME !== 'push') {
+  if (!process.env.GITHUB_EVENT_NAME) {
+    console.warn('GITHUB_EVENT_NAME is not set; assuming push payload input.');
+  } else if (process.env.GITHUB_EVENT_NAME !== 'push') {
     console.log(`Ignoring ${process.env.GITHUB_EVENT_NAME}; this app only handles push events.`);
     return;
   }
