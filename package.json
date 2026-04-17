@@ -1,0 +1,20 @@
+{
+  "name": "github-app-test",
+  "version": "1.0.0",
+  "description": "Node.js app starter for semantic version iteration on push events",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "github-app",
+    "semantic-versioning",
+    "github-actions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
