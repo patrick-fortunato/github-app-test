@@ -1,4 +1,4 @@
-# github-app-test again
+# github-app-test
 
 Node.js starter app for incrementing semantic versions in a target Node.js repository after push events.
 
